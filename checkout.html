@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán & Xác nhận | PlusAI.vn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="https://i.postimg.cc/CMGn31xZ/Logo-Plus-AI.jpg" alt="PlusAI.vn" style="height: 48px; border-radius: 8px; object-fit: contain;"></a>
+    <nav class="nav">
+      <a href="courses.html" class="nav-link">Khóa học</a>
+      <a href="about.html" class="nav-link">Về PlusAI</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="auth-link" style="display:flex; gap:16px; align-items:center"></div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" style="position:absolute; top:24px; right:24px; display:block">✕</button>
+  <div class="auth-link" style="margin-bottom:32px; text-align:center; display:flex; flex-direction:column; gap:16px"></div>
+  <a href="index.html" class="nav-link">Trang chủ</a>
+  <a href="courses.html" class="nav-link">Khóa học</a>
+  <a href="about.html" class="nav-link">Về PlusAI</a>
+  <a href="faq.html" class="nav-link">FAQ</a>
+  <a href="contact.html" class="nav-link">Liên hệ</a>
+</div>
+
+<div class="container" style="padding: 60px 24px; flex:1">
+  <div class="breadcrumbs">
+    <a href="index.html">Trang chủ</a>
+    <span>›</span>
+    <span>Xác nhận đơn hàng</span>
+  </div>
+  
+  <h1 style="margin-bottom:32px; font-size:2rem">Xác nhận thông tin & Thanh toán</h1>
+  
+  <form id="checkoutForm" onsubmit="handleCheckout(event)" class="checkout-layout">
+    <div>
+      <div class="checkout-box">
+        <h3>1. Thông tin học viên</h3>
+        <p style="font-size:0.9rem; color:var(--body); margin-bottom:24px">Vui lòng kiểm tra kỹ thông tin. Chứng nhận IHRAI và tài khoản học sẽ được gửi qua Email này.</p>
+        <div class="form-group">
+          <label class="form-label">Họ và tên</label>
+          <input type="text" name="fullName" class="form-control" required readonly style="background:var(--bg-section)">
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required readonly style="background:var(--bg-section)">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Số điện thoại</label>
+            <input type="tel" name="phone" class="form-control" required readonly style="background:var(--bg-section)">
+          </div>
+        </div>
+      </div>
+      
+      <div class="checkout-box" style="margin-top:32px">
+        <h3>2. Phương thức thanh toán</h3>
+        <div style="border:1px solid var(--primary); border-radius:var(--radius-sm); padding:20px; background:var(--primary-light); display:flex; gap:16px; align-items:center">
+          <input type="radio" id="bank" name="payment" checked style="width:20px; height:20px; accent-color:var(--primary)">
+          <label for="bank" style="font-weight:600; color:var(--heading); cursor:pointer">Chuyển khoản ngân hàng (Miễn phí giao dịch)</label>
+        </div>
+        <p style="font-size:0.9rem; color:var(--body); margin-top:16px">Thông tin tài khoản MB Bank sẽ được hiển thị ở màn hình tiếp theo để bạn thực hiện chuyển khoản an toàn.</p>
+      </div>
+    </div>
+    
+    <div>
+      <div class="checkout-box" style="position:sticky; top:100px; border-color:var(--primary)">
+        <h3 style="margin-bottom:16px; border-bottom:none; padding-bottom:0">Tóm tắt khóa học</h3>
+        <div style="font-size:0.85rem; color:var(--body); margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid var(--border)">
+          Bạn đang đăng ký lộ trình học từ PlusAI.vn - Đối tác đào tạo cấp chứng nhận bởi Viện IHRAI.
+        </div>
+        
+        <div id="checkoutOrderItems">
+          <!-- JS Render Here -->
+        </div>
+        
+        <div class="summary-total" style="border-top:1px solid var(--border); padding-top:24px; margin-top:24px">
+          <span>Tổng thanh toán</span>
+          <span id="checkoutTotal" style="color:var(--cta)">0đ</span>
+        </div>
+        
+        
+      <div class="form-group" style="display:flex; gap:8px; align-items:start; margin-top:16px; margin-bottom:24px">
+        <input type="checkbox" id="agreePrivacy" required style="margin-top:4px; accent-color:var(--primary)">
+        <label for="agreePrivacy" style="font-size:0.85rem; color:var(--body); line-height:1.5">
+          Tôi đã đọc, hiểu rõ và đồng ý cho phép xử lý dữ liệu cá nhân theo <a href="faq.html#privacy" target="_blank" style="color:var(--primary); font-weight:600">Chính sách bảo mật</a> (Nghị định 13/2023/NĐ-CP).
+        </label>
+      </div>
+<button type="submit" class="btn btn-cta btn-full" style="font-size:1.1rem; padding:16px">Xác nhận & Thanh toán</button>
+        <p style="text-align:center; font-size:0.8rem; color:var(--body); margin-top:16px">
+          Bằng việc xác nhận, bạn đồng ý với <a href="faq.html#terms" style="text-decoration:underline">Điều khoản</a> và <a href="faq.html#payment" style="text-decoration:underline">Chính sách thanh toán</a> của chúng tôi.
+        </p>
+      </div>
+    </div>
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">PlusAI.vn</div>
+        <p class="footer-info">PlusAI.vn là nền tảng khóa học trực tuyến do CÔNG TY TNHH 1YEARS sở hữu và vận hành, cung cấp các giải pháp đào tạo AI thực chiến.</p>
+        <div class="mt-4">
+          <div class="footer-info"><strong>CÔNG TY TNHH 1YEARS</strong></div>
+          <div class="footer-info">Giấy CNĐKDN: 0319452642 - Ngày cấp: 28/05/2024<br>Nơi cấp: Sở Kế hoạch và Đầu tư TP.HCM<br>Đại diện pháp luật: Đang cập nhật</div>
+          <div class="footer-info">Địa chỉ: Tòa nhà Barotex, Số 6 Võ Văn Kiệt, Phường Sài Gòn, TP.HCM, Việt Nam</div>
+        </div>
+      </div>
+      <div>
+        <h4>Khám phá</h4>
+        <ul>
+          <li><a href="courses.html">Tất cả khóa học</a></li>
+          <li><a href="about.html">Về PlusAI / 1YEARS</a></li>
+          <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+          <li><a href="contact.html">Liên hệ hỗ trợ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Chính sách</h4>
+        <ul>
+          <li><a href="faq.html#terms">Điều khoản sử dụng</a></li>
+          <li><a href="faq.html#privacy">Chính sách bảo mật</a></li>
+          <li><a href="faq.html#payment">Chính sách thanh toán</a></li>
+          <li><a href="faq.html#refund">Chính sách hoàn tiền</a></li>
+          <li><a href="faq.html#complaint">Giải quyết khiếu nại</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 CÔNG TY TNHH 1YEARS. Tất cả quyền được bảo lưu.</div>
+      <div>Hotline: 0342528286 - Ms Tiên | Email: oneyears.2026@gmail.com</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

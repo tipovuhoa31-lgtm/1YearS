@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách & Quy định | PlusAI.vn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .faq-item { background:#fff; border:1px solid var(--border); border-radius:var(--radius-sm); margin-bottom:16px; padding:24px; box-shadow:var(--shadow-sm); }
+    .faq-q { font-size:1.1rem; font-weight:600; color:var(--heading); margin-bottom:12px; }
+    .faq-a { color:var(--body); line-height:1.7; }
+    .policy-section { margin-top:60px; padding-top:40px; border-top:1px dashed var(--border); }
+    .policy-section h2 { font-size: 1.5rem; margin-bottom: 20px; color: var(--primary); }
+    .policy-section h3 { font-size: 1.1rem; margin-top: 24px; margin-bottom: 12px; color: var(--heading); }
+    .policy-section p, .policy-section li { color: var(--body); line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
+    .policy-section ul { padding-left: 24px; list-style-type: disc; margin-bottom: 16px; }
+  </style>
+  <link rel="stylesheet" crossorigin href="/assets/style-BCeALLwD.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="https://i.postimg.cc/CMGn31xZ/Logo-Plus-AI.jpg" alt="PlusAI.vn" style="height: 48px; border-radius: 8px; object-fit: contain;"></a>
+    <nav class="nav">
+      <a href="courses.html" class="nav-link">Khóa học</a>
+      <a href="about.html" class="nav-link">Về PlusAI</a>
+      <a href="faq.html" class="nav-link" style="color:var(--primary)">FAQ & Chính sách</a>
+      <a href="contact.html" class="nav-link">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="auth-link" style="display:flex; gap:16px; align-items:center"></div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" style="position:absolute; top:24px; right:24px; display:block">✕</button>
+  <div class="auth-link" style="margin-bottom:32px; text-align:center; display:flex; flex-direction:column; gap:16px"></div>
+  <a href="index.html" class="nav-link">Trang chủ</a>
+  <a href="courses.html" class="nav-link">Khóa học</a>
+  <a href="about.html" class="nav-link">Về PlusAI</a>
+  <a href="faq.html" class="nav-link">FAQ & Chính sách</a>
+  <a href="contact.html" class="nav-link">Liên hệ</a>
+</div>
+
+<div class="container" style="padding: 60px 24px; flex:1; max-width:900px">
+  <div class="breadcrumbs">
+    <a href="index.html">Trang chủ</a>
+    <span>›</span>
+    <span>FAQ & Chính sách pháp lý</span>
+  </div>
+
+  <div class="text-center mb-8">
+    <h1 class="section-title">Câu hỏi thường gặp & Quy định chung</h1>
+    <p class="section-subtitle">Tài liệu pháp lý tuân thủ Nghị định 52/2013/NĐ-CP, Nghị định 85/2021/NĐ-CP và Nghị định 13/2023/NĐ-CP về Thương mại điện tử và Bảo vệ dữ liệu cá nhân tại Việt Nam.</p>
+  </div>
+  
+  <div id="faq">
+    <h2 style="font-size:1.8rem; margin-bottom:24px; border-bottom:2px solid var(--primary); padding-bottom:12px; display:inline-block">I. Câu hỏi thường gặp (FAQ)</h2>
+    <div class="faq-item mt-4">
+      <div class="faq-q">Lộ trình học diễn ra trong bao lâu?</div>
+      <div class="faq-a">Bạn được cấp quyền truy cập toàn bộ tài liệu và bài giảng của lộ trình trong suốt 12 tháng. Bạn có thể tự chủ động sắp xếp thời gian học online bất cứ lúc nào. Các nội dung thực hành sẽ được cập nhật liên tục theo chu kỳ lớp.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Tôi chưa biết gì về AI thì có học được không?</div>
+      <div class="faq-a">Hoàn toàn được. Các khóa học của chúng tôi được thiết kế từ nền tảng đến thực chiến ứng dụng. Trọng tâm của khóa học là hướng dẫn bạn tư duy đặt lệnh (Prompting) và tự động hóa quy trình làm việc chứ không yêu cầu kiến thức lập trình phức tạp.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Sau khi thanh toán, tôi nhận khóa học như thế nào?</div>
+      <div class="faq-a">Đối với sản phẩm là khóa học số, thời gian cung cấp dịch vụ là ngay lập tức. Sau khi hệ thống hoặc kế toán xác nhận giao dịch chuyển khoản thành công (thường từ 5-30 phút trong giờ hành chính), thông tin tài khoản đăng nhập và link truy cập lộ trình học sẽ được gửi trực tiếp qua Email bạn đã đăng ký.</div>
+    </div>
+  </div>
+
+  <div class="policy-section" id="privacy">
+    <h2 style="font-size:1.8rem; border-bottom:2px solid var(--primary); padding-bottom:12px; display:inline-block">II. Chính sách bảo vệ dữ liệu cá nhân (Privacy Policy)</h2>
+    <p>Chính sách này tuân thủ <strong>Nghị định 13/2023/NĐ-CP</strong> về bảo vệ dữ liệu cá nhân. CÔNG TY TNHH 1YEARS ("PlusAI.vn" hoặc "Chúng tôi") cam kết bảo mật tuyệt đối thông tin của Học viên ("Khách hàng").</p>
+    
+    <h3>1. Mục đích và Phạm vi thu thập thông tin</h3>
+    <p>Việc thu thập dữ liệu chủ yếu trên website PlusAI.vn bao gồm: Họ tên, Email, Số điện thoại. Đây là các thông tin bắt buộc Khách hàng cần cung cấp để Chúng tôi thực hiện:</p>
+    <ul>
+      <li>Tạo lập tài khoản học viên và định danh trên hệ thống.</li>
+      <li>Gửi mã kích hoạt, thông báo nâng cấp lộ trình học, và chứng nhận hoàn thành khóa học (Viện IHRAI).</li>
+      <li>Liên hệ xác nhận đơn hàng, hỗ trợ kỹ thuật và giải quyết khiếu nại.</li>
+    </ul>
+
+    <h3>2. Phạm vi sử dụng thông tin</h3>
+    <p>Dữ liệu cá nhân chỉ được sử dụng trong nội bộ công ty để cung cấp dịch vụ. Chúng tôi cam kết KHÔNG bán, chia sẻ hay trao đổi thông tin cá nhân của Khách hàng cho bất kỳ bên thứ ba nào vì mục đích thương mại, ngoại trừ các cơ quan Nhà nước có thẩm quyền khi có yêu cầu hợp pháp.</p>
+
+    <h3>3. Thời gian lưu trữ thông tin</h3>
+    <p>Dữ liệu cá nhân của Khách hàng sẽ được lưu trữ an toàn trên máy chủ của PlusAI.vn trong suốt thời gian Khách hàng sử dụng dịch vụ (Tối thiểu 12 tháng theo chu kỳ khóa học). Thông tin sẽ được xóa/hủy bỏ khi có yêu cầu hợp lệ từ phía Khách hàng gửi về bộ phận CSKH.</p>
+
+    <h3>4. Quyền của Chủ thể dữ liệu</h3>
+    <p>Theo Nghị định 13/2023/NĐ-CP, Khách hàng có quyền yêu cầu Chúng tôi cung cấp, chỉnh sửa hoặc xóa dữ liệu cá nhân của mình. Mọi yêu cầu vui lòng gửi email về: <strong>oneyears.2026@gmail.com</strong>. Khách hàng cũng có quyền rút lại sự đồng ý cho phép xử lý dữ liệu, tuy nhiên điều này có thể dẫn đến việc chấm dứt cung cấp dịch vụ khóa học đang diễn ra.</p>
+
+    <h3>5. Cơ chế giải quyết khiếu nại liên quan đến rò rỉ dữ liệu</h3>
+    <p>Khi phát hiện thông tin cá nhân bị sử dụng sai mục đích, Khách hàng vui lòng gọi ngay Hotline <strong>0342528286</strong>. Chúng tôi cam kết sẽ có biện pháp phản hồi và phối hợp với cơ quan điều tra trong vòng tối đa 24 giờ làm việc.</p>
+  </div>
+
+  <div class="policy-section" id="payment">
+    <h2 style="font-size:1.8rem; border-bottom:2px solid var(--primary); padding-bottom:12px; display:inline-block">III. Chính sách thanh toán & Cung ứng dịch vụ</h2>
+    <h3>1. Phương thức thanh toán</h3>
+    <p>Hiện tại, PlusAI.vn áp dụng phương thức thanh toán trả trước bằng hình thức <strong>Chuyển khoản ngân hàng (Internet Banking)</strong>. Mọi giao dịch được thực hiện qua tài khoản công ty hợp pháp. Khách hàng có trách nhiệm rà soát lại thông tin đơn hàng trước khi bấm "Xác nhận & Thanh toán". Thông tin tài khoản nhận tiền sẽ được hiển thị trên giao diện trang Success.</p>
+    
+    <h3>2. Hình thức và thời gian cung ứng dịch vụ</h3>
+    <p>Do sản phẩm là hàng hóa/dịch vụ số (Khóa học trực tuyến), Chúng tôi không áp dụng chính sách vận chuyển vật lý. Dịch vụ được cung cấp 100% qua môi trường mạng (Internet).</p>
+    <ul>
+      <li><strong>Thời gian giao quyền truy cập:</strong> Ngay sau khi xác nhận thanh toán thành công (5-30 phút).</li>
+      <li><strong>Định dạng cung cấp:</strong> Tài khoản đăng nhập học tập và Tài liệu PDF/Video bài giảng tích hợp sẵn trên nền tảng.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="refund">
+    <h2 style="font-size:1.8rem; border-bottom:2px solid var(--primary); padding-bottom:12px; display:inline-block">IV. Chính sách Đổi trả và Hoàn tiền (Refund Policy)</h2>
+    <p>Nhằm đảm bảo quyền lợi tuyệt đối cho người học, PlusAI.vn thiết lập chính sách hoàn tiền rõ ràng cho các sản phẩm khóa học số:</p>
+    <h3>1. Điều kiện hoàn tiền</h3>
+    <ul>
+      <li>Khách hàng được quyền yêu cầu hoàn tiền 100% trong vòng <strong>03 ngày (72 giờ)</strong> kể từ thời điểm tài khoản học tập được kích hoạt thành công.</li>
+      <li>Yêu cầu hoàn tiền được chấp thuận khi Khách hàng chứng minh được nội dung khóa học có sai lệch nghiêm trọng so với mô tả trên website, hoặc lỗi kỹ thuật từ phía máy chủ PlusAI.vn khiến Khách hàng không thể truy cập bài giảng trong thời gian dài.</li>
+      <li>Không áp dụng hoàn tiền cho các trường hợp: Đổi ý không muốn học, hoặc đã học vượt quá 30% thời lượng toàn bộ lộ trình.</li>
+    </ul>
+    <h3>2. Quy trình xử lý hoàn tiền</h3>
+    <p>Khách hàng gửi yêu cầu (kèm mã đơn hàng và lý do) qua Email: <strong>oneyears.2026@gmail.com</strong>. Bộ phận CSKH sẽ xác minh và phản hồi trong vòng 48 giờ. Thời gian hoàn tiền (qua chuyển khoản) là từ 3-7 ngày làm việc kể từ khi yêu cầu được duyệt.</p>
+  </div>
+
+  <div class="policy-section" id="terms">
+    <h2 style="font-size:1.8rem; border-bottom:2px solid var(--primary); padding-bottom:12px; display:inline-block">V. Điều khoản sử dụng & Giải quyết tranh chấp</h2>
+    <h3>1. Quy định về Bản quyền và Sử dụng tài khoản</h3>
+    <p>Toàn bộ học liệu, video, văn bản trên website thuộc bản quyền của CÔNG TY TNHH 1YEARS và Viện IHRAI. Việc Khách hàng chia sẻ tài khoản học viên cho người khác, hoặc sao chép, phát tán nội dung dưới mọi hình thức nhằm mục đích thương mại mà không có sự đồng ý bằng văn bản là vi phạm nghiêm trọng.</p>
+    <p>Chúng tôi có quyền **đình chỉ hoặc khóa vĩnh viễn** tài khoản mà không cần hoàn phí nếu phát hiện hệ thống ghi nhận tài khoản được đăng nhập từ nhiều địa chỉ IP/thiết bị bất thường cùng một lúc.</p>
+
+    <h3>2. Cơ chế giải quyết tranh chấp, khiếu nại</h3>
+    <p>PlusAI.vn luôn đề cao việc giải quyết khiếu nại trên tinh thần thương lượng, hòa giải. Quy trình tiếp nhận:</p>
+    <ol style="padding-left: 24px; color:var(--body); line-height: 1.8; margin-bottom: 16px;">
+      <li>Khách hàng liên hệ khiếu nại qua Hotline (0342528286) hoặc Email.</li>
+      <li>Bộ phận CSKH tiếp nhận và đưa ra phương án giải quyết trong vòng tối đa 03 ngày làm việc.</li>
+      <li>Trường hợp hai bên không thể tự thỏa thuận, tranh chấp sẽ được đưa ra giải quyết tại Tòa án có thẩm quyền tại TP.HCM theo quy định của pháp luật Việt Nam.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">PlusAI.vn</div>
+        <p class="footer-info">PlusAI.vn là nền tảng khóa học trực tuyến do CÔNG TY TNHH 1YEARS sở hữu và vận hành, cung cấp các giải pháp đào tạo AI thực chiến.</p>
+        <div class="mt-4">
+          <div class="footer-info"><strong>CÔNG TY TNHH 1YEARS</strong></div>
+          <div class="footer-info">Giấy CNĐKDN: 0319452642 - Ngày cấp: 28/05/2024<br>Nơi cấp: Sở Kế hoạch và Đầu tư TP.HCM<br>Đại diện pháp luật: Đang cập nhật</div>
+          <div class="footer-info">Địa chỉ: Tòa nhà Barotex, Số 6 Võ Văn Kiệt, Phường Sài Gòn, TP.HCM, Việt Nam</div>
+        </div>
+      </div>
+      <div>
+        <h4>Khám phá</h4>
+        <ul>
+          <li><a href="courses.html">Tất cả khóa học</a></li>
+          <li><a href="about.html">Về PlusAI / 1YEARS</a></li>
+          <li><a href="faq.html">FAQ & Chính sách</a></li>
+          <li><a href="contact.html">Liên hệ hỗ trợ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Chính sách pháp lý</h4>
+        <ul>
+          <li><a href="faq.html#terms">Điều khoản sử dụng</a></li>
+          <li><a href="faq.html#privacy">Chính sách bảo mật</a></li>
+          <li><a href="faq.html#payment">Chính sách thanh toán</a></li>
+          <li><a href="faq.html#refund">Chính sách hoàn tiền</a></li>
+          <li><a href="faq.html#terms">Giải quyết khiếu nại</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 CÔNG TY TNHH 1YEARS. Tất cả quyền được bảo lưu.</div>
+      <div>Hotline: 0342528286 - Ms Tiên | Email: oneyears.2026@gmail.com</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
