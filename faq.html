@@ -15,6 +15,22 @@
     .policy-section h3 { font-size: 1.1rem; margin-top: 24px; margin-bottom: 12px; color: var(--heading); }
     .policy-section p, .policy-section li { color: var(--body); line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
     .policy-section ul { padding-left: 24px; list-style-type: disc; margin-bottom: 16px; }
+    .bank-info-box { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1.5px solid #86efac; border-left: 5px solid #16a34a; border-radius: 12px; padding: 24px 28px; margin: 20px 0 28px; }
+    .bank-info-box .bank-title { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; color: #15803d; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .bank-info-box .bank-account-number { font-size: 2rem; font-weight: 800; color: #14532d; letter-spacing: 0.05em; margin: 4px 0 16px; font-family: 'Courier New', monospace; }
+    .bank-info-box .bank-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+    .bank-info-box .bank-row { display: flex; flex-direction: column; gap: 2px; }
+    .bank-info-box .bank-label { font-size: 0.75rem; color: #166534; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .bank-info-box .bank-value { font-size: 0.95rem; color: #14532d; font-weight: 600; }
+    .bank-info-box .transfer-note { margin-top: 18px; padding: 12px 16px; background: rgba(22,163,74,0.1); border-radius: 8px; font-size: 0.88rem; color: #166534; }
+    .bank-info-box .transfer-note strong { color: #15803d; }
+    .legal-info-box { background: #f8faff; border: 1.5px solid #c7d7f5; border-left: 5px solid #4169e1; border-radius: 12px; padding: 20px 28px; margin: 8px 0 20px; }
+    .legal-info-box .legal-title { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; color: #2d4a99; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .legal-info-box .legal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+    .legal-info-box .legal-row { display: flex; flex-direction: column; gap: 2px; }
+    .legal-info-box .legal-label { font-size: 0.72rem; color: #4169e1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .legal-info-box .legal-value { font-size: 0.9rem; color: #1e3a8a; font-weight: 500; }
+    @media (max-width: 600px) { .bank-info-box .bank-grid, .legal-info-box .legal-grid { grid-template-columns: 1fr; } .bank-info-box .bank-account-number { font-size: 1.5rem; } }
   </style>
 </head>
 <body>
@@ -101,8 +117,62 @@
   <div class="policy-section" id="payment">
     <h2 style="font-size:1.8rem; border-bottom:2px solid var(--primary); padding-bottom:12px; display:inline-block">III. Chính sách thanh toán & Cung ứng dịch vụ</h2>
     <h3>1. Phương thức thanh toán</h3>
-    <p>Hiện tại, PlusAI.vn áp dụng phương thức thanh toán trả trước bằng hình thức <strong>Chuyển khoản ngân hàng (Internet Banking)</strong>. Mọi giao dịch được thực hiện qua tài khoản công ty hợp pháp. Khách hàng có trách nhiệm rà soát lại thông tin đơn hàng trước khi bấm "Xác nhận & Thanh toán". Thông tin tài khoản nhận tiền sẽ được hiển thị trên giao diện trang Success.</p>
-    
+    <p>Hiện tại, PlusAI.vn áp dụng phương thức thanh toán trả trước bằng hình thức <strong>Chuyển khoản ngân hàng (Internet Banking)</strong>. Mọi giao dịch được thực hiện qua tài khoản công ty hợp pháp. Khách hàng có trách nhiệm rà soát lại thông tin đơn hàng trước khi bấm "Xác nhận & Thanh toán".</p>
+
+    <div class="bank-info-box">
+      <div class="bank-title">🏦 Tài khoản nhận thanh toán</div>
+      <div class="bank-account-number">83828286</div>
+      <div class="bank-grid">
+        <div class="bank-row">
+          <span class="bank-label">Ngân hàng</span>
+          <span class="bank-value">MB Bank (MBBank)</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Chủ tài khoản</span>
+          <span class="bank-value">CÔNG TY TNHH 1YEARS</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Chi nhánh</span>
+          <span class="bank-value">TP. Hồ Chí Minh</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Hình thức</span>
+          <span class="bank-value">Chuyển khoản (Internet Banking)</span>
+        </div>
+      </div>
+      <div class="transfer-note">📌 <strong>Nội dung chuyển khoản gợi ý:</strong> [Họ tên] – [Tên khóa học] – [Số điện thoại]. Ví dụ: <em>Nguyen Van A – AI Workflow – 0901234567</em></div>
+    </div>
+
+    <div class="legal-info-box">
+      <div class="legal-title">🏢 Thông tin pháp nhân nhận thanh toán</div>
+      <div class="legal-grid">
+        <div class="legal-row">
+          <span class="legal-label">Tên công ty</span>
+          <span class="legal-value">CÔNG TY TNHH 1YEARS</span>
+        </div>
+        <div class="legal-row">
+          <span class="legal-label">Mã số thuế</span>
+          <span class="legal-value">0319452642</span>
+        </div>
+        <div class="legal-row">
+          <span class="legal-label">Người đại diện</span>
+          <span class="legal-value">Ngô Hà Tiên – Giám đốc</span>
+        </div>
+        <div class="legal-row">
+          <span class="legal-label">Hotline</span>
+          <span class="legal-value">0342528286 (Ms Tiên)</span>
+        </div>
+        <div class="legal-row" style="grid-column: 1 / -1">
+          <span class="legal-label">Địa chỉ</span>
+          <span class="legal-value">Tòa nhà Barotex, Số 6 Võ Văn Kiệt, Phường Sài Gòn, TP.HCM, Việt Nam</span>
+        </div>
+        <div class="legal-row">
+          <span class="legal-label">Email</span>
+          <span class="legal-value">oneyears.2026@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
     <h3>2. Hình thức và thời gian cung ứng dịch vụ</h3>
     <p>Do sản phẩm là hàng hóa/dịch vụ số (Khóa học trực tuyến), Chúng tôi không áp dụng chính sách vận chuyển vật lý. Dịch vụ được cung cấp 100% qua môi trường mạng (Internet).</p>
     <ul>
